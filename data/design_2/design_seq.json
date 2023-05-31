@@ -1,0 +1,119 @@
+[
+    {
+        "generator_version": "UAV2_gen12"
+    },
+    {
+        "name": "design_10007_34a9ce88002a45de81845813212ebd27_s"
+    },
+    {
+        "node_type": "ConnectedHub6_2_2_2"
+    },
+    {
+        "node_type": "PropArm"
+    },
+    {
+        "armLength": 495.5496724719351
+    },
+    {
+        "motorType": "t_motor_U7_V2.0KV490"
+    },
+    {
+        "propType": "apc_propellers_17x10E"
+    },
+    {
+        "offset": 28.25422116503408
+    },
+    {
+        "angle": 0.0
+    },
+    {
+        "node_type": "PropArm"
+    },
+    {
+        "armLength": 491.17236250723363
+    },
+    {
+        "motorType": "t_motor_MN4010KV370"
+    },
+    {
+        "propType": "apc_propellers_15x5_5MR"
+    },
+    {
+        "offset": 41.172582413975746
+    },
+    {
+        "angle": 0.0
+    },
+    {
+        "node_type": "AngledPropArm"
+    },
+    {
+        "armLength": 228.4569996357744
+    },
+    {
+        "motorType": "t_motor_AT4130KV300"
+    },
+    {
+        "propType": "apc_propellers_14x14N"
+    },
+    {
+        "node_type": "SingleBatteryFuselageWithComponents"
+    },
+    {
+        "batteryType": "TurnigyGraphene1300mAh4S75C"
+    },
+    {
+        "length": 84.0
+    },
+    {
+        "vertDiameter": 52.5
+    },
+    {
+        "horzDiameter": 339.9
+    },
+    {
+        "floorHeight": 8.75
+    },
+    {
+        "batteryX": -4.5
+    },
+    {
+        "batteryY": 6.0
+    },
+    {
+        "rpmX": -4.5
+    },
+    {
+        "rpmY": -103.3
+    },
+    {
+        "autoPilotX": -4.5
+    },
+    {
+        "autoPilotY": 47.0
+    },
+    {
+        "currentX": -4.5
+    },
+    {
+        "currentY": -83.15
+    },
+    {
+        "voltageX": -4.5
+    },
+    {
+        "voltageY": 100.8
+    },
+    {
+        "gpsX": -4.5
+    },
+    {
+        "gpsY": -43.0
+    },
+    {
+        "varioX": -4.5
+    },
+    {
+        "varioY": 79.15
+    }
+]

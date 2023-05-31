@@ -1,0 +1,182 @@
+[
+    {
+        "generator_version": "UAV2_gen12"
+    },
+    {
+        "name": "design_10500_9217b3d721c84b45bbee35caefa8d4d3_s"
+    },
+    {
+        "node_type": "ConnectedHub6_1_2_2_1"
+    },
+    {
+        "node_type": "AngledPropArm"
+    },
+    {
+        "armLength": 307.9088076275723
+    },
+    {
+        "motorType": "t_motor_AT4125KV540"
+    },
+    {
+        "propType": "apc_propellers_20x10E"
+    },
+    {
+        "node_type": "CrossSegment"
+    },
+    {
+        "armLength": 466.41054329636114
+    },
+    {
+        "node_type": "AngledPropArm"
+    },
+    {
+        "armLength": 429.07552569221474
+    },
+    {
+        "motorType": "t_motor_MN4014KV400"
+    },
+    {
+        "propType": "apc_propellers_16x8E"
+    },
+    {
+        "node_type": "BranchWithTopSegment_Sym"
+    },
+    {
+        "armLength": 378.5754928834796
+    },
+    {
+        "angle": 180.0
+    },
+    {
+        "node_type": "AngledPropArm"
+    },
+    {
+        "armLength": 210.11323893431475
+    },
+    {
+        "motorType": "kde_direct_KDE4213XF_360"
+    },
+    {
+        "propType": "apc_propellers_17x10WE"
+    },
+    {
+        "node_type": "PropArm"
+    },
+    {
+        "armLength": 281.86163209688016
+    },
+    {
+        "motorType": "kde_direct_KDE3520XF_400"
+    },
+    {
+        "propType": "apc_propellers_15x4W"
+    },
+    {
+        "offset": -13.024360691468232
+    },
+    {
+        "angle": 0.0
+    },
+    {
+        "node_type": "DoubleBendSegment"
+    },
+    {
+        "angle": -90.0
+    },
+    {
+        "arm1Length": 341.38350998761973
+    },
+    {
+        "arm2Length": 70.2471793093779
+    },
+    {
+        "node_type": "PropArm"
+    },
+    {
+        "armLength": 389.28965280986336
+    },
+    {
+        "motorType": "t_motor_U7_V2.0KV490"
+    },
+    {
+        "propType": "apc_propellers_16x12E"
+    },
+    {
+        "offset": -16.472975760205358
+    },
+    {
+        "angle": 0.0
+    },
+    {
+        "node_type": "AngledPropArm"
+    },
+    {
+        "armLength": 407.3703675241871
+    },
+    {
+        "motorType": "t_motor_AntigravityMN5006KV450"
+    },
+    {
+        "propType": "apc_propellers_17x8"
+    },
+    {
+        "node_type": "SingleBatteryFuselageWithComponents"
+    },
+    {
+        "batteryType": "Tattu5C20000mAh6S1P"
+    },
+    {
+        "length": 189.0
+    },
+    {
+        "vertDiameter": 114.0
+    },
+    {
+        "horzDiameter": 372.9
+    },
+    {
+        "floorHeight": 19.0
+    },
+    {
+        "batteryX": 0.0
+    },
+    {
+        "batteryY": 6.0
+    },
+    {
+        "rpmX": 0.0
+    },
+    {
+        "rpmY": -114.3
+    },
+    {
+        "autoPilotX": 0.0
+    },
+    {
+        "autoPilotY": 58.0
+    },
+    {
+        "currentX": 0.0
+    },
+    {
+        "currentY": -94.15
+    },
+    {
+        "voltageX": 0.0
+    },
+    {
+        "voltageY": 111.8
+    },
+    {
+        "gpsX": 0.0
+    },
+    {
+        "gpsY": -54.0
+    },
+    {
+        "varioX": 0.0
+    },
+    {
+        "varioY": 90.15
+    }
+]

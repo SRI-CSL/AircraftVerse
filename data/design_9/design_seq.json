@@ -1,0 +1,140 @@
+[
+    {
+        "generator_version": "UAV2_gen12"
+    },
+    {
+        "name": "design_10567_3f7f9a3614c449e6b049c26bc57d2e7b_s"
+    },
+    {
+        "node_type": "ConnectedHub4_1_2_1"
+    },
+    {
+        "node_type": "BendSegment"
+    },
+    {
+        "angle": -46.135206908731206
+    },
+    {
+        "armLength": 260.8078766905325
+    },
+    {
+        "node_type": "PropArm"
+    },
+    {
+        "armLength": 438.71318291081235
+    },
+    {
+        "motorType": "t_motor_MN4014KV400"
+    },
+    {
+        "propType": "apc_propellers_17x8N"
+    },
+    {
+        "offset": -49.42827208217945
+    },
+    {
+        "angle": 0.0
+    },
+    {
+        "node_type": "CrossSegment"
+    },
+    {
+        "armLength": 261.757967013828
+    },
+    {
+        "node_type": "AngledPropArm"
+    },
+    {
+        "armLength": 499.4780709630923
+    },
+    {
+        "motorType": "kde_direct_KDE5215XF_435"
+    },
+    {
+        "propType": "apc_propellers_15x5_5MR"
+    },
+    {
+        "node_type": "AngledPropArm"
+    },
+    {
+        "armLength": 255.74047020283285
+    },
+    {
+        "motorType": "kde_direct_KDE700XF_455_G3"
+    },
+    {
+        "propType": "apc_propellers_15x11"
+    },
+    {
+        "node_type": "AngledPropArm"
+    },
+    {
+        "armLength": 143.62670586329142
+    },
+    {
+        "motorType": "t_motor_MN3520KV400"
+    },
+    {
+        "propType": "apc_propellers_17x8N"
+    },
+    {
+        "node_type": "SingleBatteryFuselageWithComponents"
+    },
+    {
+        "batteryType": "TurnigyGraphene5000mAh6S75C"
+    },
+    {
+        "length": 145.0
+    },
+    {
+        "vertDiameter": 76.5
+    },
+    {
+        "horzDiameter": 377.4
+    },
+    {
+        "floorHeight": 12.75
+    },
+    {
+        "batteryX": 0.0
+    },
+    {
+        "batteryY": 6.0
+    },
+    {
+        "rpmX": 0.0
+    },
+    {
+        "rpmY": -115.8
+    },
+    {
+        "autoPilotX": 0.0
+    },
+    {
+        "autoPilotY": 59.5
+    },
+    {
+        "currentX": 0.0
+    },
+    {
+        "currentY": -95.65
+    },
+    {
+        "voltageX": 0.0
+    },
+    {
+        "voltageY": 113.3
+    },
+    {
+        "gpsX": 0.0
+    },
+    {
+        "gpsY": -55.5
+    },
+    {
+        "varioX": 0.0
+    },
+    {
+        "varioY": 91.65
+    }
+]

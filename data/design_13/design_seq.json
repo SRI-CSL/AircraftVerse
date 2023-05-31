@@ -1,0 +1,89 @@
+[
+    {
+        "generator_version": "UAV2_gen12"
+    },
+    {
+        "name": "design_10685_95918bf147234d3898f54a92c8fa5f65_s"
+    },
+    {
+        "node_type": "ConnectedHub6_Sym"
+    },
+    {
+        "node_type": "PropArm"
+    },
+    {
+        "armLength": 301.90668524909734
+    },
+    {
+        "motorType": "kde_direct_KDE600XF_1100_G3"
+    },
+    {
+        "propType": "apc_propellers_9x4_7SF"
+    },
+    {
+        "offset": -43.457941690054305
+    },
+    {
+        "angle": 0.0
+    },
+    {
+        "node_type": "SingleBatteryFuselageWithComponents"
+    },
+    {
+        "batteryType": "Tattu15C17000mAh6S1PHV"
+    },
+    {
+        "length": 195.0
+    },
+    {
+        "vertDiameter": 117.0
+    },
+    {
+        "horzDiameter": 382.65
+    },
+    {
+        "floorHeight": 19.5
+    },
+    {
+        "batteryX": 0.0
+    },
+    {
+        "batteryY": 6.0
+    },
+    {
+        "rpmX": 0.0
+    },
+    {
+        "rpmY": -117.55
+    },
+    {
+        "autoPilotX": 0.0
+    },
+    {
+        "autoPilotY": 61.25
+    },
+    {
+        "currentX": 0.0
+    },
+    {
+        "currentY": -97.4
+    },
+    {
+        "voltageX": 0.0
+    },
+    {
+        "voltageY": 115.05
+    },
+    {
+        "gpsX": 0.0
+    },
+    {
+        "gpsY": -57.25
+    },
+    {
+        "varioX": 0.0
+    },
+    {
+        "varioY": 93.4
+    }
+]

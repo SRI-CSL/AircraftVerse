@@ -1,0 +1,140 @@
+[
+    {
+        "generator_version": "UAV2_gen12"
+    },
+    {
+        "name": "design_10185_2f54055c030e4a28baaae0a791f09b92_s"
+    },
+    {
+        "node_type": "ConnectedHub4_2_2"
+    },
+    {
+        "node_type": "SidewaysBendSegment"
+    },
+    {
+        "angle": -90.0
+    },
+    {
+        "armLength": 359.9427558904812
+    },
+    {
+        "node_type": "PropArm"
+    },
+    {
+        "armLength": 359.7803552454114
+    },
+    {
+        "motorType": "t_motor_MN4012KV400"
+    },
+    {
+        "propType": "apc_propellers_17x6"
+    },
+    {
+        "offset": -29.700364630559108
+    },
+    {
+        "angle": 291.0073607806044
+    },
+    {
+        "node_type": "WingArm"
+    },
+    {
+        "armLength": 267.1890830311946
+    },
+    {
+        "wingType": "Wing_horiz_hole"
+    },
+    {
+        "nacaProfile": "0021"
+    },
+    {
+        "span": 1252.3800257294001
+    },
+    {
+        "chordInner": 225.3504229126574
+    },
+    {
+        "chordOuter": 184.97549276362486
+    },
+    {
+        "taperOffset": true
+    },
+    {
+        "aileronBias": 0.6207562700698128
+    },
+    {
+        "flapBias": 0.4013393352491901
+    },
+    {
+        "load": 594.6336169363282
+    },
+    {
+        "tubeOffset": 84.30287779915295
+    },
+    {
+        "tubeRot": 270.0
+    },
+    {
+        "servoType": "Hitec_HS_53"
+    },
+    {
+        "node_type": "SingleBatteryFuselageWithComponents"
+    },
+    {
+        "batteryType": "TurnigyGraphene1600mAh4S75CSquare"
+    },
+    {
+        "length": 95.0
+    },
+    {
+        "vertDiameter": 52.5
+    },
+    {
+        "horzDiameter": 338.4
+    },
+    {
+        "floorHeight": 8.75
+    },
+    {
+        "batteryX": 0.0
+    },
+    {
+        "batteryY": 6.0
+    },
+    {
+        "rpmX": 0.0
+    },
+    {
+        "rpmY": -102.8
+    },
+    {
+        "autoPilotX": 0.0
+    },
+    {
+        "autoPilotY": 46.5
+    },
+    {
+        "currentX": 0.0
+    },
+    {
+        "currentY": -82.65
+    },
+    {
+        "voltageX": 0.0
+    },
+    {
+        "voltageY": 100.3
+    },
+    {
+        "gpsX": 0.0
+    },
+    {
+        "gpsY": -42.5
+    },
+    {
+        "varioX": 0.0
+    },
+    {
+        "varioY": 78.65
+    }
+]

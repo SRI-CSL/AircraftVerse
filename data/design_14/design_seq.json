@@ -1,0 +1,89 @@
+[
+    {
+        "generator_version": "UAV2_gen12"
+    },
+    {
+        "name": "design_10054_c28152b452e64121969debf230093c2e_s"
+    },
+    {
+        "node_type": "ConnectedHub6_Sym"
+    },
+    {
+        "node_type": "PropArm"
+    },
+    {
+        "armLength": 416.8882598342745
+    },
+    {
+        "motorType": "kde_direct_KDE700XF_295_G3"
+    },
+    {
+        "propType": "apc_propellers_14x12"
+    },
+    {
+        "offset": 0.5054341733615715
+    },
+    {
+        "angle": 0.0
+    },
+    {
+        "node_type": "SingleBatteryFuselageWithComponents"
+    },
+    {
+        "batteryType": "TurnigyGraphene6000mAh4S75C"
+    },
+    {
+        "length": 168.0
+    },
+    {
+        "vertDiameter": 103.5
+    },
+    {
+        "horzDiameter": 336.9
+    },
+    {
+        "floorHeight": 17.25
+    },
+    {
+        "batteryX": 0.0
+    },
+    {
+        "batteryY": 6.0
+    },
+    {
+        "rpmX": 0.0
+    },
+    {
+        "rpmY": -102.3
+    },
+    {
+        "autoPilotX": 0.0
+    },
+    {
+        "autoPilotY": 46.0
+    },
+    {
+        "currentX": 0.0
+    },
+    {
+        "currentY": -82.15
+    },
+    {
+        "voltageX": 0.0
+    },
+    {
+        "voltageY": 99.8
+    },
+    {
+        "gpsX": 0.0
+    },
+    {
+        "gpsY": -42.0
+    },
+    {
+        "varioX": 0.0
+    },
+    {
+        "varioY": 78.15
+    }
+]
