@@ -1,6 +1,6 @@
 # AircraftVerse
 
-![AircraftVerse](aircraftDesigns.png)
+![AircraftVerse](AircraftDesigns.png)
 
 ### Accompanying code to the paper: AircraftVerse: A Large-Scale Multimodal Dataset of Aerial Vehicle Designs
 
