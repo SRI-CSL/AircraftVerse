@@ -74,7 +74,7 @@ app.layout = html.Div(children=[
 
     html.Center([
 
-    html.Div(children='We present AircraftVerse, a publicly available dataset with over 28,000 diverse set of air vehicle designs.',
+    html.Div(children='We present AircraftVerse, a publicly available dataset with over 27,000 diverse set of air vehicle designs.',
     style={
         'textAlign': 'center',
         'color': colors['text'],
