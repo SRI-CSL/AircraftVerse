@@ -32,13 +32,13 @@ def read_stl(stl_file):
     ])
     return content
 
-stl_file_35 = "./assets/datasets/design_35.stl"
+stl_file_35 = "./assets/design_1.stl"
 des_35 = read_stl(stl_file_35)
 
-stl_file_445 = "./assets/datasets/design_445.stl"
+stl_file_445 = "./assets/design_2.stl"
 des_445 = read_stl(stl_file_445)
 
-stl_file_1096 = "./assets/datasets/design_1096.stl"
+stl_file_1096 = "./assets/design_3.stl"
 des_1096 = read_stl(stl_file_1096)
 
 # Themes: https://dash-bootstrap-components.opensource.faculty.ai/docs/themes/
