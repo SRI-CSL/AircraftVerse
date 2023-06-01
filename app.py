@@ -42,7 +42,7 @@ stl_file_1096 = "./assets/design_3.stl"
 des_1096 = read_stl(stl_file_1096)
 
 # Themes: https://dash-bootstrap-components.opensource.faculty.ai/docs/themes/
-app = Dash(__name__, title='UAV Designverse', external_stylesheets=[dbc.themes.DARKLY])
+app = Dash(__name__, title='AircraftVerse', external_stylesheets=[dbc.themes.DARKLY])
 # DARKLY colors: https://github.com/thomaspark/bootswatch/blob/c143eda36a068054ebad9b4c80314c40f13c9c10/docs/5/darkly/_variables.scss
 server = app.server
 
@@ -93,7 +93,7 @@ app.layout = html.Div(children=[
         'display': 'inline-block',
         'vertical-align': 'top',
         'width': '33%',
-        "height": "200px",
+        "height": "300px",
         'padding': '8px 0px'
     },
     ),
@@ -106,7 +106,7 @@ app.layout = html.Div(children=[
         'display': 'inline-block',
         'vertical-align': 'top',
         'width': '33%',
-        "height": "200px",
+        "height": "300px",
         'padding': '8px 0px'
     },
     ),
@@ -119,14 +119,14 @@ app.layout = html.Div(children=[
         'display': 'inline-block',
         'vertical-align': 'top',
         'width': '33%',
-        "height": "200px",
+        "height": "300px",
         'padding': '8px 0px'
     },
     ),
 
     html.Div(
     # style={"width": "100%", "height": "400px"},
-    children=['Use the mouse to manipulate the UAV designs (STL Files) in the figures above.'],
+    children=['Use the mouse to manipulate the Aircraft designs (STL Files) in the figures above.'],
     style={
         # 'display': 'inline-block',
         'vertical-align': 'top',
