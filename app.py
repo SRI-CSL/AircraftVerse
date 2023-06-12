@@ -147,7 +147,7 @@ app.layout = html.Div(children=[
     }),
 
     html.A([html.Button('Dataset', id='btn-nclicks-1', n_clicks=0, className = "button button2"),], href = 'https://zenodo.org/record/6525446'),
-    html.A([html.Button('Paper', id='btn-nclicks-2', n_clicks=0, className = "button button2"),], href = 'https://github.com/SRI-CSL/AircraftVerse/blob/main/draft.pdf'),
+    html.A([html.Button('Paper', id='btn-nclicks-2', n_clicks=0, className = "button button2"),], href = 'https://arxiv.org/abs/2306.05562'),
     html.A([html.Button('Explore Designs', id='btn-nclicks-3', n_clicks=0, className = "button button2"),], href = 'https://github.com/SRI-CSL/AircraftVerse/'),
 
     dcc.Markdown('''### Acknowledgements
