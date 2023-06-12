@@ -6,6 +6,12 @@
 
 We present AircraftVerse, a publicly available aerial vehicle design dataset. AircraftVerse contains 28,080 diverse battery powered aircraft designs that have been evaluated using state-of-the-art physics models that characterize performance metrics such as maximum flight distance and hover-time.
 
+**Paper**: https://arxiv.org/abs/2306.05562
+
+**Dataset**: http://doi.org/10.5281/zenodo.6525446
+
+
+### Repository Structure
 
 The repository is structured as follows:
 * notebooks contains:
