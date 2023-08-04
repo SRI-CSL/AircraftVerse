@@ -1,0 +1,1006 @@
+[
+    {
+        "component_type": "Battery",
+        "component_choices": [
+            "Tattu10C25000mAh6S1PHV",
+            "Tattu10C32000mAh6S1PHV",
+            "Tattu10C40000mAh6S1PHV",
+            "Tattu15C16000mAh4S1P",
+            "Tattu15C17000mAh6S1PHV",
+            "Tattu25C10000mAh4S1P",
+            "Tattu25C11000mAh6S1PHV",
+            "Tattu25C19000mAh14S1P",
+            "Tattu25C22000mAh14S1P",
+            "Tattu25C22000mAh4S1P",
+            "Tattu25C23000mAh6S1PHV",
+            "Tattu25C25000mAh14S1P",
+            "Tattu25C28000mAh6S1P",
+            "Tattu25C30000mAh6S1P",
+            "Tattu25C7000mAh6S1P",
+            "Tattu25C8000mAh6S1P",
+            "Tattu25C9000mAh6S1P",
+            "Tattu30C10000mAh6S1P",
+            "Tattu30C12000mAh6S1P",
+            "Tattu30C16000mAh6S1P",
+            "Tattu30C22000mAh6S1P",
+            "Tattu35C6000mAh6S1P",
+            "Tattu5C20000mAh6S1P",
+            "Tattu5C28000mAh6S1P",
+            "TattuPlus15C16000mAh12S1P",
+            "TattuPlus15C16000mAh12S1PAGRI",
+            "TattuPlus15C16000mAh12S1Pcompact",
+            "TattuPlus25C22000mAh12S1P",
+            "TattuPlus25C22000mAh12S1PAGRI",
+            "TattuPro25C22000mAh12S1P",
+            "TattuPro25C22000mAh14S1P",
+            "TurnigyGraphene1000mAh2S75C",
+            "TurnigyGraphene1000mAh3S75C",
+            "TurnigyGraphene1000mAh4S75C",
+            "TurnigyGraphene1000mAh6S75C",
+            "TurnigyGraphene1200mAh6S75C",
+            "TurnigyGraphene1300mAh3S75C",
+            "TurnigyGraphene1300mAh4S75C",
+            "TurnigyGraphene1400mAh4S75C",
+            "TurnigyGraphene1500mAh3S75C",
+            "TurnigyGraphene1500mAh4S75C",
+            "TurnigyGraphene1600mAh4S75CSquare",
+            "TurnigyGraphene2200mAh3S75C",
+            "TurnigyGraphene2200mAh4S75C",
+            "TurnigyGraphene3000mAh3S75C",
+            "TurnigyGraphene3000mAh4S75C",
+            "TurnigyGraphene3000mAh6S75C",
+            "TurnigyGraphene4000mAh3S75C",
+            "TurnigyGraphene4000mAh4S75C",
+            "TurnigyGraphene4000mAh6S75C",
+            "TurnigyGraphene5000mAh3S75C",
+            "TurnigyGraphene5000mAh4S75C",
+            "TurnigyGraphene5000mAh6S75C",
+            "TurnigyGraphene6000mAh3S75C",
+            "TurnigyGraphene6000mAh4S75C",
+            "TurnigyGraphene6000mAh6S75C"
+        ],
+        "connectors": [
+            "Bottom_Connector",
+            "PowerBus",
+            "Top_Connector"
+        ],
+        "params": [
+            "ROTATION"
+        ]
+    },
+    {
+        "component_type": "BatteryController",
+        "component_choices": [
+            "BatteryController"
+        ],
+        "connectors": [
+            "BatteryPower",
+            "MotorPower"
+        ],
+        "params": [
+            "Input_Voltage",
+            "Output_Voltage"
+        ]
+    },
+    {
+        "component_type": "Cargo",
+        "component_choices": [
+            "Cargo"
+        ],
+        "connectors": [
+            "CargoConnector"
+        ],
+        "params": [
+            "WEIGHT"
+        ]
+    },
+    {
+        "component_type": "CargoCase",
+        "component_choices": [
+            "CargoCase"
+        ],
+        "connectors": [
+            "CargoConnector",
+            "Case2HubConnector"
+        ],
+        "params": [
+            "Rotation"
+        ]
+    },
+    {
+        "component_type": "Flange",
+        "component_choices": [
+            "0281_para_flange",
+            "0394_para_flange",
+            "05OD_para_flange"
+        ],
+        "connectors": [
+            "BottomConnector",
+            "SideConnector",
+            "TopConnector"
+        ],
+        "params": [
+            "BOTTOM_ANGLE",
+            "SIDE_ANGLE"
+        ]
+    },
+    {
+        "component_type": "Motor",
+        "component_choices": [
+            "kde_direct_KDE10218XF_105",
+            "kde_direct_KDE13218XF_105",
+            "kde_direct_KDE2306XF_2550",
+            "kde_direct_KDE2315XF_885",
+            "kde_direct_KDE2315XF_965",
+            "kde_direct_KDE2814XF_515",
+            "kde_direct_KDE2814XF_775",
+            "kde_direct_KDE3510XF_475",
+            "kde_direct_KDE3510XF_715",
+            "kde_direct_KDE3520XF_400",
+            "kde_direct_KDE4012XF_400",
+            "kde_direct_KDE4014XF_380",
+            "kde_direct_KDE4213XF_360",
+            "kde_direct_KDE4215XF_465",
+            "kde_direct_KDE5215XF_220",
+            "kde_direct_KDE5215XF_330",
+            "kde_direct_KDE5215XF_435",
+            "kde_direct_KDE600XF_1100_G3",
+            "kde_direct_KDE600XF_530_G3",
+            "kde_direct_KDE6213XF_185",
+            "kde_direct_KDE6815XF_205",
+            "kde_direct_KDE700XF_295_G3",
+            "kde_direct_KDE700XF_455_G3",
+            "kde_direct_KDE700XF_535_G3",
+            "kde_direct_KDE7208XF_135",
+            "kde_direct_KDE7215XF_135",
+            "kde_direct_KDE8218XF_120",
+            "t_motor_AS2308KV1450",
+            "t_motor_AS2308KV2600",
+            "t_motor_AS2312KV1150",
+            "t_motor_AS2312KV1400",
+            "t_motor_AS2317KV1250",
+            "t_motor_AS2317KV1400",
+            "t_motor_AS2317KV880",
+            "t_motor_AS2814KV1050",
+            "t_motor_AS2814KV1200",
+            "t_motor_AS2814KV2000",
+            "t_motor_AS2814KV900",
+            "t_motor_AS2820KV1050",
+            "t_motor_AS2820KV1250",
+            "t_motor_AS2820KV880",
+            "t_motor_AT2308KV1450",
+            "t_motor_AT2308KV2600",
+            "t_motor_AT2310KV2200",
+            "t_motor_AT2312KV1150",
+            "t_motor_AT2312KV1400",
+            "t_motor_AT2317KV1250",
+            "t_motor_AT2317KV1400",
+            "t_motor_AT2317KV880",
+            "t_motor_AT2321KV1250",
+            "t_motor_AT2321KV950",
+            "t_motor_AT2814KV1050",
+            "t_motor_AT2814KV1200",
+            "t_motor_AT2814KV900",
+            "t_motor_AT2820KV1050",
+            "t_motor_AT2820KV1250",
+            "t_motor_AT2820KV880",
+            "t_motor_AT2826KV1100",
+            "t_motor_AT2826KV900",
+            "t_motor_AT3520KV550",
+            "t_motor_AT3520KV720",
+            "t_motor_AT3520KV850",
+            "t_motor_AT3530KV580",
+            "t_motor_AT4120KV250",
+            "t_motor_AT4120KV500",
+            "t_motor_AT4120KV560",
+            "t_motor_AT4125KV250",
+            "t_motor_AT4125KV540",
+            "t_motor_AT4130KV230",
+            "t_motor_AT4130KV300",
+            "t_motor_AT4130KV450",
+            "t_motor_AntigravityMN1005V2KV90",
+            "t_motor_AntigravityMN2806KV401",
+            "t_motor_AntigravityMN2806KV650",
+            "t_motor_AntigravityMN4004KV300",
+            "t_motor_AntigravityMN4004KV400",
+            "t_motor_AntigravityMN4006KV380",
+            "t_motor_AntigravityMN5006KV300",
+            "t_motor_AntigravityMN5006KV450",
+            "t_motor_AntigravityMN5008KV170",
+            "t_motor_AntigravityMN5008KV340",
+            "t_motor_AntigravityMN5008KV400",
+            "t_motor_AntigravityMN6007IIKV160",
+            "t_motor_AntigravityMN6007IIKV320",
+            "t_motor_AntigravityMN6007KV160",
+            "t_motor_AntigravityMN6007KV320",
+            "t_motor_AntigravityMN7005KV115",
+            "t_motor_AntigravityMN7005KV230",
+            "t_motor_AntigravityMN8012KV100",
+            "t_motor_AntigravityMN8014KV100",
+            "t_motor_AntigravityMN8017KV120",
+            "t_motor_MN22041400KV",
+            "t_motor_MN2212KV780",
+            "t_motor_MN2212KV920",
+            "t_motor_MN3110KV470",
+            "t_motor_MN3110KV700",
+            "t_motor_MN3110KV780",
+            "t_motor_MN3508KV380",
+            "t_motor_MN3508KV580",
+            "t_motor_MN3508KV700",
+            "t_motor_MN3510KV360",
+            "t_motor_MN3510KV630",
+            "t_motor_MN3510KV700",
+            "t_motor_MN3515KV400",
+            "t_motor_MN3520KV400",
+            "t_motor_MN4010KV370",
+            "t_motor_MN4010KV475",
+            "t_motor_MN4010KV580",
+            "t_motor_MN4012KV340",
+            "t_motor_MN4012KV400",
+            "t_motor_MN4012KV480",
+            "t_motor_MN4014KV330",
+            "t_motor_MN4014KV400",
+            "t_motor_MN5208KV340",
+            "t_motor_MN5212KV340",
+            "t_motor_MN5212KV420",
+            "t_motor_MT13063100KV",
+            "t_motor_MT22081100KV",
+            "t_motor_MT2216V2800KV",
+            "t_motor_P60KV170",
+            "t_motor_P60KV340",
+            "t_motor_P80IIIKV100",
+            "t_motor_P80IIIKV120",
+            "t_motor_U10IIKV100",
+            "t_motor_U11IIKV120",
+            "t_motor_U12IIKV120",
+            "t_motor_U12IIKV60",
+            "t_motor_U13IIKV130",
+            "t_motor_U13IIKV65",
+            "t_motor_U15IIKV100",
+            "t_motor_U15IIKV80",
+            "t_motor_U3KV700",
+            "t_motor_U5KV400",
+            "t_motor_U7_V2.0KV280",
+            "t_motor_U7_V2.0KV420",
+            "t_motor_U7_V2.0KV490",
+            "t_motor_U8IIKV100",
+            "t_motor_U8IIKV150",
+            "t_motor_U8IIKV190",
+            "t_motor_U8IIKV85",
+            "t_motor_U8LiteKV100",
+            "t_motor_U8LiteKV150",
+            "t_motor_U8LiteKV190",
+            "t_motor_U8LiteKV85",
+            "t_motor_U8LiteLKV110",
+            "t_motor_U8LiteLKV95"
+        ],
+        "connectors": [
+            "Base_Connector",
+            "MotorPower",
+            "Prop_Connector"
+        ],
+        "params": [
+            "CONTROL_CHANNEL"
+        ]
+    },
+    {
+        "component_type": "Orient",
+        "component_choices": [
+            "Orient"
+        ],
+        "connectors": [
+            "Mount",
+            "ORIENTCONN"
+        ],
+        "params": [
+            "Z_ANGLE"
+        ]
+    },
+    {
+        "component_type": "Para_Hub_2",
+        "component_choices": [
+            "0394od_para_hub_2"
+        ],
+        "connectors": [
+            "Bottom_Connector",
+            "Center_Connector",
+            "Orient_Connector",
+            "Side_Connector_1",
+            "Side_Connector_2",
+            "Top_Connector"
+        ],
+        "params": [
+            "ANGHORZCONN",
+            "ANGVERTCONN",
+            "DIAMETER"
+        ]
+    },
+    {
+        "component_type": "Para_Hub_3",
+        "component_choices": [
+            "0394od_para_hub_3"
+        ],
+        "connectors": [
+            "Bottom_Connector",
+            "Center_Connector",
+            "Orient_Connector",
+            "Side_Connector_1",
+            "Side_Connector_2",
+            "Side_Connector_3",
+            "Top_Connector"
+        ],
+        "params": [
+            "ANGHORZCONN",
+            "ANGVERTCONN",
+            "DIAMETER"
+        ]
+    },
+    {
+        "component_type": "Para_Hub_4",
+        "component_choices": [
+            "0394od_para_hub_4"
+        ],
+        "connectors": [
+            "Bottom_Connector",
+            "Center_Connector",
+            "Orient_Connector",
+            "Side_Connector_1",
+            "Side_Connector_2",
+            "Side_Connector_3",
+            "Side_Connector_4",
+            "Top_Connector"
+        ],
+        "params": [
+            "ANGHORZCONN",
+            "ANGVERTCONN",
+            "DIAMETER"
+        ]
+    },
+    {
+        "component_type": "Para_Hub_5",
+        "component_choices": [
+            "0394od_para_hub_5"
+        ],
+        "connectors": [
+            "Bottom_Connector",
+            "Center_Connector",
+            "Orient_Connector",
+            "Side_Connector_1",
+            "Side_Connector_2",
+            "Side_Connector_3",
+            "Side_Connector_4",
+            "Side_Connector_5",
+            "Top_Connector"
+        ],
+        "params": [
+            "ANGHORZCONN",
+            "ANGVERTCONN",
+            "DIAMETER"
+        ]
+    },
+    {
+        "component_type": "Para_Hub_6",
+        "component_choices": [
+            "0394od_para_hub_6"
+        ],
+        "connectors": [
+            "Bottom_Connector",
+            "Center_Connector",
+            "Orient_Connector",
+            "Side_Connector_1",
+            "Side_Connector_2",
+            "Side_Connector_3",
+            "Side_Connector_4",
+            "Side_Connector_5",
+            "Side_Connector_6",
+            "Top_Connector"
+        ],
+        "params": [
+            "ANGHORZCONN",
+            "ANGVERTCONN",
+            "DIAMETER"
+        ]
+    },
+    {
+        "component_type": "Propeller",
+        "component_choices": [
+            "apc_propellers_10_5x6",
+            "apc_propellers_10x10",
+            "apc_propellers_10x10E",
+            "apc_propellers_10x3",
+            "apc_propellers_10x3_8SF",
+            "apc_propellers_10x4",
+            "apc_propellers_10x4_5MR",
+            "apc_propellers_10x4_6SF",
+            "apc_propellers_10x4_7SF",
+            "apc_propellers_10x5",
+            "apc_propellers_10x5E",
+            "apc_propellers_10x5_5MR",
+            "apc_propellers_10x6",
+            "apc_propellers_10x6E",
+            "apc_propellers_10x7",
+            "apc_propellers_10x7E",
+            "apc_propellers_10x7SF",
+            "apc_propellers_10x8",
+            "apc_propellers_10x8E",
+            "apc_propellers_10x9",
+            "apc_propellers_11_5x4",
+            "apc_propellers_11_5x6",
+            "apc_propellers_11x10",
+            "apc_propellers_11x10E",
+            "apc_propellers_11x11",
+            "apc_propellers_11x12",
+            "apc_propellers_11x12E",
+            "apc_propellers_11x12W",
+            "apc_propellers_11x13",
+            "apc_propellers_11x14",
+            "apc_propellers_11x3",
+            "apc_propellers_11x3_8SF",
+            "apc_propellers_11x4",
+            "apc_propellers_11x4_5MR",
+            "apc_propellers_11x4_6SF",
+            "apc_propellers_11x4_7SF",
+            "apc_propellers_11x5",
+            "apc_propellers_11x5_5E",
+            "apc_propellers_11x5_5MR",
+            "apc_propellers_11x6",
+            "apc_propellers_11x7",
+            "apc_propellers_11x7E",
+            "apc_propellers_11x8",
+            "apc_propellers_11x8E",
+            "apc_propellers_11x8_5E",
+            "apc_propellers_11x9",
+            "apc_propellers_12_25x3_75",
+            "apc_propellers_12_5x10",
+            "apc_propellers_12_5x6",
+            "apc_propellers_12x10",
+            "apc_propellers_12x10E",
+            "apc_propellers_12x10W",
+            "apc_propellers_12x11",
+            "apc_propellers_12x12",
+            "apc_propellers_12x12E",
+            "apc_propellers_12x12N",
+            "apc_propellers_12x13",
+            "apc_propellers_12x13N",
+            "apc_propellers_12x3_8SF",
+            "apc_propellers_12x4",
+            "apc_propellers_12x4_5MR",
+            "apc_propellers_12x4_7SF",
+            "apc_propellers_12x5",
+            "apc_propellers_12x5_5MR",
+            "apc_propellers_12x6",
+            "apc_propellers_12x6E",
+            "apc_propellers_12x6SF",
+            "apc_propellers_12x7",
+            "apc_propellers_12x8",
+            "apc_propellers_12x8E",
+            "apc_propellers_12x8SF",
+            "apc_propellers_12x9",
+            "apc_propellers_12x9W",
+            "apc_propellers_13_5x10",
+            "apc_propellers_13_5x13_5",
+            "apc_propellers_13_5x14",
+            "apc_propellers_13_5x9",
+            "apc_propellers_13x10",
+            "apc_propellers_13x10E",
+            "apc_propellers_13x11",
+            "apc_propellers_13x13N",
+            "apc_propellers_13x13_5N",
+            "apc_propellers_13x14",
+            "apc_propellers_13x4",
+            "apc_propellers_13x4E",
+            "apc_propellers_13x4W",
+            "apc_propellers_13x4_5MR",
+            "apc_propellers_13x4_7SF",
+            "apc_propellers_13x5_5E",
+            "apc_propellers_13x5_5MR",
+            "apc_propellers_13x6",
+            "apc_propellers_13x6_5E",
+            "apc_propellers_13x7",
+            "apc_propellers_13x8",
+            "apc_propellers_13x8E",
+            "apc_propellers_13x9",
+            "apc_propellers_14x10",
+            "apc_propellers_14x10E",
+            "apc_propellers_14x11",
+            "apc_propellers_14x12",
+            "apc_propellers_14x12E",
+            "apc_propellers_14x12N",
+            "apc_propellers_14x13",
+            "apc_propellers_14x13N",
+            "apc_propellers_14x13_5",
+            "apc_propellers_14x14",
+            "apc_propellers_14x14E",
+            "apc_propellers_14x14N",
+            "apc_propellers_14x4W",
+            "apc_propellers_14x4_7SF",
+            "apc_propellers_14x5N",
+            "apc_propellers_14x5_5MR",
+            "apc_propellers_14x6",
+            "apc_propellers_14x6E",
+            "apc_propellers_14x7",
+            "apc_propellers_14x7E",
+            "apc_propellers_14x8",
+            "apc_propellers_14x8_5E",
+            "apc_propellers_15_5x12W",
+            "apc_propellers_15x10",
+            "apc_propellers_15x10E",
+            "apc_propellers_15x11",
+            "apc_propellers_15x12",
+            "apc_propellers_15x4E",
+            "apc_propellers_15x4W",
+            "apc_propellers_15x5_5MR",
+            "apc_propellers_15x6",
+            "apc_propellers_15x6E",
+            "apc_propellers_15x7",
+            "apc_propellers_15x7E",
+            "apc_propellers_15x8",
+            "apc_propellers_15x8E",
+            "apc_propellers_16x10",
+            "apc_propellers_16x10E",
+            "apc_propellers_16x12",
+            "apc_propellers_16x12E",
+            "apc_propellers_16x13",
+            "apc_propellers_16x14",
+            "apc_propellers_16x16",
+            "apc_propellers_16x4E",
+            "apc_propellers_16x4W",
+            "apc_propellers_16x5_5MR",
+            "apc_propellers_16x6",
+            "apc_propellers_16x6E",
+            "apc_propellers_16x7",
+            "apc_propellers_16x8",
+            "apc_propellers_16x8E",
+            "apc_propellers_17x10",
+            "apc_propellers_17x10E",
+            "apc_propellers_17x10N",
+            "apc_propellers_17x10WE",
+            "apc_propellers_17x12",
+            "apc_propellers_17x12E",
+            "apc_propellers_17x12W",
+            "apc_propellers_17x13",
+            "apc_propellers_17x4W",
+            "apc_propellers_17x6",
+            "apc_propellers_17x6E",
+            "apc_propellers_17x7E",
+            "apc_propellers_17x8",
+            "apc_propellers_17x8E",
+            "apc_propellers_17x8N",
+            "apc_propellers_18_1x10",
+            "apc_propellers_18_1x12",
+            "apc_propellers_18x10",
+            "apc_propellers_18x10E",
+            "apc_propellers_18x12",
+            "apc_propellers_18x12E",
+            "apc_propellers_18x12WE",
+            "apc_propellers_18x14",
+            "apc_propellers_18x5_5MR",
+            "apc_propellers_18x6W",
+            "apc_propellers_18x8",
+            "apc_propellers_18x8E",
+            "apc_propellers_18x8W",
+            "apc_propellers_19x10E",
+            "apc_propellers_19x11",
+            "apc_propellers_19x12E",
+            "apc_propellers_19x12WE",
+            "apc_propellers_19x8E",
+            "apc_propellers_19x8W",
+            "apc_propellers_20_5x12WE",
+            "apc_propellers_20_5x14E",
+            "apc_propellers_20x10",
+            "apc_propellers_20x10E",
+            "apc_propellers_20x10W",
+            "apc_propellers_20x11E",
+            "apc_propellers_20x12",
+            "apc_propellers_20x12WE",
+            "apc_propellers_20x13E",
+            "apc_propellers_20x14",
+            "apc_propellers_20x15C",
+            "apc_propellers_20x15E",
+            "apc_propellers_20x8",
+            "apc_propellers_20x8E",
+            "apc_propellers_20x8W",
+            "apc_propellers_21x10W",
+            "apc_propellers_21x12WE",
+            "apc_propellers_21x13E",
+            "apc_propellers_21x13WE",
+            "apc_propellers_22x10",
+            "apc_propellers_22x10E",
+            "apc_propellers_22x12E",
+            "apc_propellers_22x12WE",
+            "apc_propellers_22x8",
+            "apc_propellers_24x12E",
+            "apc_propellers_25x12_5E",
+            "apc_propellers_26x13E",
+            "apc_propellers_26x15E",
+            "apc_propellers_27x13E",
+            "apc_propellers_4_1x4_1E",
+            "apc_propellers_4_2x2",
+            "apc_propellers_4_2x4",
+            "apc_propellers_4_5x3_5",
+            "apc_propellers_4_5x4",
+            "apc_propellers_4_5x4_1E",
+            "apc_propellers_4_75x4",
+            "apc_propellers_4_75x4_5E",
+            "apc_propellers_4_75x4_5EC",
+            "apc_propellers_4_75x4_75E",
+            "apc_propellers_4_75x4_75EC",
+            "apc_propellers_4_75x5_5E",
+            "apc_propellers_4_7x4_2E",
+            "apc_propellers_5_1x4_5E",
+            "apc_propellers_5_25x5_5E",
+            "apc_propellers_5_25x6_25E",
+            "apc_propellers_5_5x2",
+            "apc_propellers_5_5x2_5",
+            "apc_propellers_5_5x4_5E",
+            "apc_propellers_5_5x4_7E",
+            "apc_propellers_5_5x6_5E",
+            "apc_propellers_5_7x3",
+            "apc_propellers_5x3",
+            "apc_propellers_5x3E",
+            "apc_propellers_5x4R_RH",
+            "apc_propellers_5x5E",
+            "apc_propellers_5x7_5E",
+            "apc_propellers_6_3x4",
+            "apc_propellers_6_5x2_9",
+            "apc_propellers_6_5x3_7",
+            "apc_propellers_6_5x5_0",
+            "apc_propellers_6_5x5_5",
+            "apc_propellers_6_5x6_0",
+            "apc_propellers_6_5x6_5",
+            "apc_propellers_6x2",
+            "apc_propellers_6x3",
+            "apc_propellers_6x3R_RH",
+            "apc_propellers_6x4",
+            "apc_propellers_6x4E",
+            "apc_propellers_6x5",
+            "apc_propellers_6x5_5E",
+            "apc_propellers_6x6E",
+            "apc_propellers_7_4x7_5C",
+            "apc_propellers_7_4x7_6C",
+            "apc_propellers_7_4x7_7C",
+            "apc_propellers_7_8x4",
+            "apc_propellers_7_8x6",
+            "apc_propellers_7_8x7",
+            "apc_propellers_7x10",
+            "apc_propellers_7x3",
+            "apc_propellers_7x4",
+            "apc_propellers_7x4E",
+            "apc_propellers_7x4SF",
+            "apc_propellers_7x4_1SF",
+            "apc_propellers_7x5",
+            "apc_propellers_7x5E",
+            "apc_propellers_7x5SF",
+            "apc_propellers_7x6",
+            "apc_propellers_7x6E",
+            "apc_propellers_7x6SF",
+            "apc_propellers_7x6W",
+            "apc_propellers_7x7",
+            "apc_propellers_7x7E",
+            "apc_propellers_7x8",
+            "apc_propellers_7x9",
+            "apc_propellers_8_75x5_0",
+            "apc_propellers_8_75x7_0N",
+            "apc_propellers_8_75x7_5N",
+            "apc_propellers_8_75x7_5NN",
+            "apc_propellers_8_75x7_5W",
+            "apc_propellers_8_75x7_75NN",
+            "apc_propellers_8_75x8_0NN",
+            "apc_propellers_8_75x8_5N",
+            "apc_propellers_8_75x8_75NN",
+            "apc_propellers_8_75x8_75W",
+            "apc_propellers_8_75x9_0NN",
+            "apc_propellers_8_75x9_0W",
+            "apc_propellers_8_75x9_25NN",
+            "apc_propellers_8_75x9_25W",
+            "apc_propellers_8_8x8_5",
+            "apc_propellers_8_8x8_75",
+            "apc_propellers_8_8x8_9",
+            "apc_propellers_8_8x9_0",
+            "apc_propellers_8_8x9_25",
+            "apc_propellers_8_8x9_5",
+            "apc_propellers_8_8x9_75",
+            "apc_propellers_8x10",
+            "apc_propellers_8x3_75",
+            "apc_propellers_8x3_8SF",
+            "apc_propellers_8x4",
+            "apc_propellers_8x4E",
+            "apc_propellers_8x4_1SF",
+            "apc_propellers_8x4_2SFR",
+            "apc_propellers_8x4_5MR",
+            "apc_propellers_8x4_7SF",
+            "apc_propellers_8x5",
+            "apc_propellers_8x6",
+            "apc_propellers_8x6E",
+            "apc_propellers_8x6SF",
+            "apc_propellers_8x7",
+            "apc_propellers_8x8",
+            "apc_propellers_8x8E",
+            "apc_propellers_8x9",
+            "apc_propellers_9_25x6_0",
+            "apc_propellers_9_3x3",
+            "apc_propellers_9_5x4_5",
+            "apc_propellers_9_5x6",
+            "apc_propellers_9_5x7N",
+            "apc_propellers_9_5x7_5N",
+            "apc_propellers_9_625x3_75N",
+            "apc_propellers_9x10",
+            "apc_propellers_9x3",
+            "apc_propellers_9x3N",
+            "apc_propellers_9x3_7SF",
+            "apc_propellers_9x3_8SF",
+            "apc_propellers_9x4",
+            "apc_propellers_9x45R_RH",
+            "apc_propellers_9x4_1SF",
+            "apc_propellers_9x4_4SFR",
+            "apc_propellers_9x4_5E",
+            "apc_propellers_9x4_5MR",
+            "apc_propellers_9x4_6SF",
+            "apc_propellers_9x4_7SF",
+            "apc_propellers_9x5",
+            "apc_propellers_9x6",
+            "apc_propellers_9x6E",
+            "apc_propellers_9x6N",
+            "apc_propellers_9x6SF",
+            "apc_propellers_9x6_5",
+            "apc_propellers_9x7",
+            "apc_propellers_9x7_5",
+            "apc_propellers_9x7_5C",
+            "apc_propellers_9x7_5E",
+            "apc_propellers_9x7_5SF",
+            "apc_propellers_9x8",
+            "apc_propellers_9x8_5",
+            "apc_propellers_9x9",
+            "apc_propellers_9x9E"
+        ],
+        "connectors": [
+            "MOTOR_CONNECTOR_CS_IN"
+        ],
+        "params": [
+            "Direction",
+            "Prop_type"
+        ]
+    },
+    {
+        "component_type": "Sensor",
+        "component_choices": [
+            "Autopilot",
+            "Current",
+            "GPS",
+            "RpmTemp",
+            "Variometer",
+            "Voltage"
+        ],
+        "connectors": [
+            "SensorConnector"
+        ],
+        "params": [
+            "ROTATION"
+        ]
+    },
+    {
+        "component_type": "Servo",
+        "component_choices": [
+            "Hitec_D485HW",
+            "Hitec_D89MW",
+            "Hitec_D954SW",
+            "Hitec_HS_225BB",
+            "Hitec_HS_225MG",
+            "Hitec_HS_40",
+            "Hitec_HS_45HB",
+            "Hitec_HS_5055MG",
+            "Hitec_HS_5065MG",
+            "Hitec_HS_5070MH",
+            "Hitec_HS_5087MH",
+            "Hitec_HS_5245MG",
+            "Hitec_HS_53",
+            "Hitec_HS_5496MH",
+            "Hitec_HS_55",
+            "Hitec_HS_5565MH",
+            "Hitec_HS_625MG",
+            "Hitec_HS_645MG",
+            "Hitec_HS_65HB",
+            "Hitec_HS_65MG",
+            "Hitec_HS_70MG",
+            "Hitec_HS_7235MH",
+            "Hitec_HS_7245MH",
+            "Hitec_HS_81",
+            "Hitec_HS_82MG",
+            "Hitec_HS_85BB",
+            "Hitec_HS_85MG"
+        ],
+        "connectors": [
+            "Connector"
+        ],
+        "params": []
+    },
+    {
+        "component_type": "Tube",
+        "component_choices": [
+            "0281OD_para_tube",
+            "0394OD_para_tube",
+            "05OD_para_tube"
+        ],
+        "connectors": [
+            "BaseConnection",
+            "EndConnection",
+            "OffsetConnection1",
+            "OffsetConnection2"
+        ],
+        "params": [
+            "BASE_ROT",
+            "END_ROT",
+            "Length",
+            "Offset1",
+            "Offset2"
+        ]
+    },
+    {
+        "component_type": "UAV_Fuselage",
+        "component_choices": [
+            "capsule_fuselage"
+        ],
+        "connectors": [
+            "BottomConnector",
+            "FloorConnector1",
+            "FloorConnector2",
+            "FloorConnector3",
+            "FloorConnector4",
+            "FloorConnector5",
+            "FloorConnector6",
+            "FloorConnector7",
+            "FloorConnector8"
+        ],
+        "params": [
+            "BOTTOM_CONNECTOR_OFFSET_LENGTH",
+            "BOTTOM_CONNECTOR_OFFSET_WIDTH",
+            "BOTTOM_CONNECTOR_ROTATION",
+            "FLOOR_CONNECTOR_1_DISP_LENGTH",
+            "FLOOR_CONNECTOR_1_DISP_WIDTH",
+            "FLOOR_CONNECTOR_2_DISP_LENGTH",
+            "FLOOR_CONNECTOR_2_DISP_WIDTH",
+            "FLOOR_CONNECTOR_3_DISP_LENGTH",
+            "FLOOR_CONNECTOR_3_DISP_WIDTH",
+            "FLOOR_CONNECTOR_4_DISP_LENGTH",
+            "FLOOR_CONNECTOR_4_DISP_WIDTH",
+            "FLOOR_CONNECTOR_5_DISP_LENGTH",
+            "FLOOR_CONNECTOR_5_DISP_WIDTH",
+            "FLOOR_CONNECTOR_6_DISP_LENGTH",
+            "FLOOR_CONNECTOR_6_DISP_WIDTH",
+            "FLOOR_CONNECTOR_7_DISP_LENGTH",
+            "FLOOR_CONNECTOR_7_DISP_WIDTH",
+            "FLOOR_CONNECTOR_8_DISP_LENGTH",
+            "FLOOR_CONNECTOR_8_DISP_WIDTH",
+            "FLOOR_HEIGHT",
+            "FUSE_CYL_LENGTH",
+            "HORZ_DIAMETER",
+            "VERT_DIAMETER"
+        ]
+    },
+    {
+        "component_type": "Wing",
+        "component_choices": [
+            "Wing_vert_hole"
+        ],
+        "connectors": [
+            "Wing_Servo_Connector",
+            "Wing_Tube_Connector"
+        ],
+        "params": [
+            "AILERON_BIAS",
+            "CHORD_1",
+            "CHORD_2",
+            "CONTROL_CHANNEL",
+            "FLAP_BIAS",
+            "LOAD",
+            "NACA_Profile",
+            "SERVO_LENGTH",
+            "SERVO_THICKNESS",
+            "SERVO_WIDTH",
+            "SPAN",
+            "TAPER_OFFSET",
+            "THICKNESS",
+            "TUBE_DIAMETER",
+            "TUBE_OFFSET",
+            "TUBE_ROTATION"
+        ]
+    },
+    {
+        "component_type": "Autopilot",
+        "component_choices": [
+            "Autopilot"
+        ],
+        "connectors": [
+            "SensorConnector"
+        ],
+        "params": [
+            "ROTATION"
+        ]
+    },
+    {
+        "component_type": "BatteryController",
+        "component_choices": [
+            "BatteryController"
+        ],
+        "connectors": [
+            "BatteryPower",
+            "MotorPower"
+        ],
+        "params": [
+            "Input_Voltage",
+            "Output_Voltage"
+        ]
+    },
+    {
+        "component_type": "Cargo",
+        "component_choices": [
+            "Cargo"
+        ],
+        "connectors": [
+            "CargoConnector"
+        ],
+        "params": [
+            "WEIGHT"
+        ]
+    },
+    {
+        "component_type": "Current",
+        "component_choices": [
+            "Current"
+        ],
+        "connectors": [
+            "SensorConnector"
+        ],
+        "params": [
+            "ROTATION"
+        ]
+    },
+    {
+        "component_type": "GPS",
+        "component_choices": [
+            "GPS"
+        ],
+        "connectors": [
+            "SensorConnector"
+        ],
+        "params": [
+            "ROTATION"
+        ]
+    },
+    {
+        "component_type": "RpmTemp",
+        "component_choices": [
+            "RpmTemp"
+        ],
+        "connectors": [
+            "SensorConnector"
+        ],
+        "params": [
+            "ROTATION"
+        ]
+    },
+    {
+        "component_type": "Variometer",
+        "component_choices": [
+            "Variometer"
+        ],
+        "connectors": [
+            "SensorConnector"
+        ],
+        "params": [
+            "ROTATION"
+        ]
+    },
+    {
+        "component_type": "Voltage",
+        "component_choices": [
+            "Voltage"
+        ],
+        "connectors": [
+            "SensorConnector"
+        ],
+        "params": [
+            "ROTATION"
+        ]
+    }
+]
