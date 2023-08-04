@@ -3,7 +3,7 @@ package com.sri.nscore
 import scala.util.Random
 import scala.collection.mutable
 
-class SWRIGenerator(val componentLibrary: ComponentLibrary) {
+class LowLevelGenerator(val componentLibrary: ComponentLibrary) {
 
   val MAX_CONTROL_CHANNELS = 13
 

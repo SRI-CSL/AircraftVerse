@@ -1,6 +1,6 @@
 package com.sri.nscore.uav2
 
-import com.sri.nscore.{SWRIGenerator, tryUntilSuccess}
+import com.sri.nscore.{LowLevelGenerator, tryUntilSuccess}
 
 import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Paths}
@@ -34,7 +34,7 @@ object UAV2GeneratorCLI {
     val compLib = new UAV2ComponentLibrary("./data/components_v2.json",
       "./data/Aero_Corpus.csv", "./data/prop_motor_pairing.csv")
     val treeGenerator = new DefaultUAV2Generator(compLib)
-    val swriGenerator = new SWRIGenerator(compLib)
+    val lowLevelGenerator = new LowLevelGenerator(compLib)
 
     (1 to numDesigns).foreach(n => {
       tryUntilSuccess { // designs are validated post-hoc
@@ -49,10 +49,10 @@ object UAV2GeneratorCLI {
         val jsonStrTree = tree.toJson()
         Files.write(outPathTree, jsonStrTree.getBytes(StandardCharsets.UTF_8))
 
-        val outPathSwri = outDir.resolve("design_swri.json")
-        val jsonStrSwri = swriGenerator.generate(tree, minProps = Some(minProps), maxProps = Some(maxProps),
+        val outPathLowLevel = outDir.resolve("design_low_level.json")
+        val jsonStrLowLevel = lowLevelGenerator.generate(tree, minProps = Some(minProps), maxProps = Some(maxProps),
           minWings = Some(minWings), maxWings = Some(maxWings)).toJson()
-        Files.write(outPathSwri, jsonStrSwri.getBytes(StandardCharsets.UTF_8))
+        Files.write(outPathLowLevel, jsonStrLowLevel.getBytes(StandardCharsets.UTF_8))
       }
     })
   }

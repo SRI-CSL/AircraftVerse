@@ -1,6 +1,6 @@
 package com.sri.nscore.uav2
 
-import com.sri.nscore.{ComponentLibrary, DesignSeq, SWRIGenerator}
+import com.sri.nscore.{ComponentLibrary, DesignSeq, LowLevelGenerator}
 import org.json4s.NoTypeHints
 import org.json4s.native.Serialization
 import java.nio.charset.StandardCharsets
@@ -12,7 +12,7 @@ object UAV2Seq2TreeCLI {
   val compLib = new UAV2ComponentLibrary("./data/components_v2.json",
     "./data/Aero_Corpus.csv", "./data/prop_motor_pairing.csv")
   implicit val formats = Serialization.formats(NoTypeHints)
-  val swriGenerator = new SWRIGenerator(compLib)
+  val lowLevelGenerator = new LowLevelGenerator(compLib)
 
   def processDesign(designDirPath: Path, rename: Boolean, bf: Boolean): Unit = {
     println(s"\nProcessing design in $designDirPath")
@@ -28,10 +28,10 @@ object UAV2Seq2TreeCLI {
       val designTreeFile = designDirPath.resolve(designTreeFilename)
       val jsonStrTree = design.toJson()
       Files.write(designTreeFile, jsonStrTree.getBytes(StandardCharsets.UTF_8))
-      val swriFilename = if (rename) "design_swri_reconstructed.json" else "design_swri.json"
-      val outPathSwri = designDirPath.resolve(swriFilename)
-      val jsonStrSwri = swriGenerator.generate(design).toJson()
-      Files.write(outPathSwri, jsonStrSwri.getBytes(StandardCharsets.UTF_8))
+      val lowLevelFilename = if (rename) "design_low_level_reconstructed.json" else "design_low_level.json"
+      val outPathLowLevel = designDirPath.resolve(lowLevelFilename)
+      val jsonStrLowLevel = lowLevelGenerator.generate(design).toJson()
+      Files.write(outPathLowLevel, jsonStrLowLevel.getBytes(StandardCharsets.UTF_8))
       println("Success!")
     } catch {
       case e: Exception => println(s"Error: ${e.getMessage}")

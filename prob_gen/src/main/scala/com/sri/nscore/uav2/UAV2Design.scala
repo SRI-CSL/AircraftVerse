@@ -106,7 +106,7 @@ case class UAV2Design(generator_version: String,
   val bodyRotParam = NamedParam("BODY_ROT_ANGLE", hub.rotationAngle)
 //  val cargoCase = CargoCase(hub.rotationAngle)
 //  val bodyRotParam = NamedParam("BODY_ROT_ANGLE", 360.0 - hub.rotationAngle)
-  override def apply(implicit g: SWRIGenerator): LowLevelAssembly = {
+  override def apply(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val fuse2hub = g.createConnection()
     val hub2case = g.createConnection()
     val case2cargo = g.createConnection()
@@ -129,7 +129,7 @@ case class UAV2Design(generator_version: String,
 // These get compiled away in the low-level representation.
 
 trait FuselageWithComponents {
-  def apply(bottomConnector: Connection, powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly
+  def apply(bottomConnector: Connection, powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly
 }
 
 object FuselageWithComponents {
@@ -175,7 +175,7 @@ case class SingleBatteryFuselageWithComponents(battery: Battery,
   val gps = Sensor("GPS")
   val variometer = Sensor("Variometer")
 
-  override def apply(bottomConnector: Connection, powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+  override def apply(bottomConnector: Connection, powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val fuse2bat = g.createConnection()
     val fuse2rpm = g.createConnection()
     val fuse2autopilot = g.createConnection()
@@ -219,7 +219,7 @@ case class DualBatteryFuselageWithComponents(battery: Battery, fuselage: DualBat
   val gps = Sensor("GPS")
   val variometer = Sensor("Variometer")
 
-  override def apply(bottomConnector: Connection, powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+  override def apply(bottomConnector: Connection, powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val fuse2bat1 = g.createConnection()
     val fuse2bat2 = g.createConnection()
     val fuse2rpm = g.createConnection()
@@ -293,7 +293,7 @@ object ConnectedHub {
 }
 
 trait ConnectedHub {
-  def apply(topConnector: Connection, bottomConnector: Connection, powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly
+  def apply(topConnector: Connection, bottomConnector: Connection, powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly
   val rotationAngle: Double
 }
 
@@ -313,7 +313,7 @@ case class ConnectedHub2_Sym_Long(mainSegment: MainSegment) extends ConnectedHub
   val mainHub = MainHub2()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val oc = g.createConnection()
@@ -340,7 +340,7 @@ case class ConnectedHub2_Sym_Wide(mainSegment: MainSegment) extends ConnectedHub
   val mainHub = MainHub2()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val oc = g.createConnection()
@@ -369,7 +369,7 @@ case class ConnectedHub2_Asym(frontSegment: MainSegment,
   val mainHub = MainHub2()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val oc = g.createConnection()
@@ -398,7 +398,7 @@ case class ConnectedHub3_Sym(angle: Double, mainSegment: MainSegment) extends Co
   override val rotationAngle = mainHub.bigAngle
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -432,7 +432,7 @@ case class ConnectedHub3_2_1(angle: Double, centerSegment: MainSegment,
   override val rotationAngle = mainHub.bigAngle
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -461,7 +461,7 @@ case class ConnectedHub4_Sym(mainSegment: MainSegment) extends ConnectedHub {
   val mainHub = MainHub4()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -492,7 +492,7 @@ case class ConnectedHub4_Sym_Aligned(mainSegment: MainSegment) extends Connected
   val mainHub = MainHub4()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -526,7 +526,7 @@ case class ConnectedHub4_1_2_1(frontSegment: MainSegment, middleSegment: MainSeg
   val mainHub = MainHub4()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -559,7 +559,7 @@ case class ConnectedHub4_2_2(frontSegment: MainSegment,
   val mainHub = MainHub4()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -591,7 +591,7 @@ case class ConnectedHub5_Sym(mainSegment: MainSegment) extends ConnectedHub {
   val mainHub = MainHub5()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -626,7 +626,7 @@ case class ConnectedHub5_4_1(centerSegment: MainSegment,
   val mainHub = MainHub5()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -663,7 +663,7 @@ case class ConnectedHub5_2_2_1(centerSegment: MainSegment,
   val mainHub = MainHub5()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -696,7 +696,7 @@ case class ConnectedHub6_Sym(mainSegment: MainSegment) extends ConnectedHub {
   val mainHub = MainHub6()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -731,7 +731,7 @@ case class ConnectedHub6_Sym_Aligned(mainSegment: MainSegment) extends Connected
   val mainHub = MainHub6()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -769,7 +769,7 @@ case class ConnectedHub6_2_2_2(frontSegment: MainSegment, middleSegment: MainSeg
   val mainHub = MainHub6()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -808,7 +808,7 @@ case class ConnectedHub6_1_2_2_1(frontCenterSegment: MainSegment, frontSegment: 
   val mainHub = MainHub6()
   val orient = Orient()
   override def apply(topConnector: Connection, bottomConnector: Connection,
-                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator):LowLevelAssembly = {
+                     powerBus: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator):LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -829,7 +829,7 @@ case class ConnectedHub6_1_2_2_1(frontCenterSegment: MainSegment, frontSegment: 
 
 trait MainSegment {
   def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-            (implicit g: SWRIGenerator): LowLevelAssembly
+            (implicit g: LowLevelGenerator): LowLevelAssembly
 }
 
 object MainSegment {
@@ -899,7 +899,7 @@ case class PropArm(armLength: Double,
                    flange: FlangeWithSide) extends MainSegment {
   val arm = Arm(armLength)
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                     (implicit g: SWRIGenerator): LowLevelAssembly = {
+                     (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()  // prop-motor
     val c2 = g.createConnection()  // flange-motor
     val c3 = g.createConnection()  // flange-arm
@@ -933,7 +933,7 @@ case class AngledPropArm(armLength: Double,
   val flange = Flange()
   val arm = Arm(armLength)
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()  // prop-motor
     val c2 = g.createConnection()  // flange-motor
     val c3 = g.createConnection()  // flange-arm
@@ -964,7 +964,7 @@ case class WingArm(armLength: Double,
                    servo: Servo) extends MainSegment {
   val arm = Arm(armLength)
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     g.ignore(powerBus) ++       // not needed, tell generator to ignore it
@@ -997,7 +997,7 @@ case class AngledWingArm(arm1Length: Double, arm2Length: Double,
   val wingArm = WingArm(arm2Length, wing, servo)
   val bendSegment = BendSegment(90.0, arm1Length, wingArm)
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     bendSegment(connector, powerBus, symmetryCategory)
   }
 }
@@ -1026,7 +1026,7 @@ case class BendSegment(angle: Double, armLength: Double, mainSegment: MainSegmen
   val endConn = Bend(0.0)                 // and another hub to get a female end connector as usual
 
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -1066,7 +1066,7 @@ case class DoubleBendSegment(angle: Double, arm1Length: Double, arm2Length: Doub
   val endConn = Bend(0.0)               // and another hub to get a female end connector as usual
 
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -1082,23 +1082,6 @@ case class DoubleBendSegment(angle: Double, arm1Length: Double, arm2Length: Doub
     mainSegment(c6,powerBus,symmetryCategory)
   }
 }
-
-/*
-case class RectifierArmSegment(armLength: Double, targetAngleXY: Double, targetAngleXZ: Double) extends MainSegment {
-  override def apply(connector: Connection, powerBus: Connection, ctx: Context, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
-    val c1 = g.createConnection()
-    val c2 = g.createConnection()
-    val rotAngle = targetAngleXZ - ctx.angleXZ
-    val bendAngle = targetAngleXY - ctx.angleXY
-    val bend = Bend(bendAngle)
-    val arm = RotatedArm(armLength, rotAngle)
-    arm(connector,c1,symmetryCategory) ++
-      bend(c1,c2,symmetryCategory) ++
-      mainSegment(c2,powerBus,symmetryCategory)
-  }
-}
- */
 
 object RotatedArmSegment {
   def fromSeq(seq: DesignSeq): (RotatedArmSegment,DesignSeq) = {
@@ -1120,7 +1103,7 @@ case class RotatedArmSegment(armLength: Double, rot: Double, mainSegment: MainSe
   val arm = RotatedArm(armLength, rot)
 
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     arm(connector,c1,symmetryCategory) ++
@@ -1149,7 +1132,7 @@ case class SidewaysBendSegment(angle: Double, armLength: Double, mainSegment: Ma
   val arm = Arm(armLength)
 
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     arm(connector,c1) ++
@@ -1180,7 +1163,7 @@ case class SidewaysBendWithTopSegment(angle: Double, armLength: Double, mainSegm
   val arm = Arm(armLength)
 
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -1210,7 +1193,7 @@ case class CrossSegment(armLength: Double, sideSegment: MainSegment, centerSegme
   val arm = Arm(armLength)
 
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val arm2hub = g.createConnection()
     val hub2left = g.createConnection()
     val hub2right = g.createConnection()
@@ -1243,7 +1226,7 @@ case class BranchSegment_Sym(armLength: Double, angle: Double, mainSegment: Main
   val arm = Arm(armLength)
 
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -1275,7 +1258,7 @@ case class BranchSegment_Asym(armLength: Double, angle: Double, frontSegment: Ma
   val arm = Arm(armLength)
 
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -1309,7 +1292,7 @@ case class BranchWithTopSegment_Sym(armLength: Double, angle: Double, mainSegmen
   val branchTop = BranchTop(angle)
 
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -1348,7 +1331,7 @@ case class BranchWithTopSegment_Asym(armLength: Double, angle: Double, leftSegme
   val branchTop = BranchTop(angle)
 
   override def apply(connector: Connection, powerBus: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val c1 = g.createConnection()
     val c2 = g.createConnection()
     val c3 = g.createConnection()
@@ -1368,7 +1351,7 @@ case class BranchTop(branchAngle: Double) {
   val bend = Bend(0.0)
 
   def apply(incomingConnector: Connection, outgoingConnector: Connection, symmetryCategory: SymmetryCategory)
-                    (implicit g: SWRIGenerator): LowLevelAssembly = {
+                    (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val arm = FixedRotationArm(50.0, symmetryCategory.branchTopRotation(branchAngle))
     val c1 = g.createConnection()
     arm(incomingConnector,c1) ++
@@ -1433,7 +1416,7 @@ case class SingleBatteryFuselage(length: Double, vertDiameter: Double, horzDiame
             gpsConnector: Connection,
             varioConnector: Connection,
             bodyRotParam: NamedParam)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     // Sanity check
     if (floorHeight > vertDiameter / 2.0){
       throw IllegalDesignException(s"Floor height must be =< fuselage vert diameter / 2!")
@@ -1553,7 +1536,7 @@ case class DualBatteryFuselage(length: Double, vertDiameter: Double, horzDiamete
             gpsConnector: Connection,
             varioConnector: Connection,
             bodyRotParam: NamedParam)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     // Sanity check
     if (floorHeight > vertDiameter / 2.0){
       throw IllegalDesignException(s"Floor height must be =< fuselage vert diameter / 2!")
@@ -1622,7 +1605,7 @@ case class DualBatteryFuselage(length: Double, vertDiameter: Double, horzDiamete
 case class MainHub2() {
   def apply(topConnector: Connection, bottomConnector: Connection, orientConnector: Connection,
              connector_1: Connection, connector_2: Connection)
-            (implicit g: SWRIGenerator): LowLevelAssembly = {
+            (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName("MainHub")
     LowLevelAssembly(
       g.labeledComponentChoice(componentName,"Para_Hub_2", "0394od_para_hub_2",
@@ -1643,7 +1626,7 @@ case class MainHub3(angle: Double) {
   val bigAngle = (360.0 - angle) / 2.0
   def apply(topConnector: Connection, bottomConnector: Connection, orientConnector: Connection,
              connector_1: Connection, connector_2: Connection, connector_3: Connection)
-            (implicit g: SWRIGenerator): LowLevelAssembly = {
+            (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName("MainHub")
     LowLevelAssembly(
       g.labeledComponentChoice(componentName,"Para_Hub_3","0394od_para_hub_3",
@@ -1664,7 +1647,7 @@ case class MainHub3(angle: Double) {
 case class MainHub4() {
   def apply(topConnector: Connection, bottomConnector: Connection, orientConnector: Connection,
              connector_1: Connection, connector_2: Connection, connector_3: Connection, connector_4: Connection)
-            (implicit g: SWRIGenerator)= {
+            (implicit g: LowLevelGenerator)= {
     val componentName = g.createComponentInstanceName("MainHub")
     LowLevelAssembly(
       g.labeledComponentChoice(componentName,"Para_Hub_4", "0394od_para_hub_4",
@@ -1687,7 +1670,7 @@ case class MainHub5() {
   def apply(topConnector: Connection, bottomConnector: Connection, orientConnector: Connection,
              connector_1: Connection, connector_2: Connection, connector_3: Connection,
              connector_4: Connection, connector_5: Connection)
-            (implicit g: SWRIGenerator) = {
+            (implicit g: LowLevelGenerator) = {
     val componentName = g.createComponentInstanceName("MainHub")
     LowLevelAssembly(
       g.labeledComponentChoice(componentName, "Para_Hub_5","0394od_para_hub_5",
@@ -1711,7 +1694,7 @@ case class MainHub6() {
   def apply(topConnector: Connection, bottomConnector: Connection, orientConnector: Connection,
             connector_1: Connection, connector_2: Connection, connector_3: Connection,
             connector_4: Connection, connector_5: Connection, connector_6: Connection)
-           (implicit g: SWRIGenerator) = {
+           (implicit g: LowLevelGenerator) = {
     val componentName = g.createComponentInstanceName("MainHub")
     LowLevelAssembly(
       g.labeledComponentChoice(componentName, "Para_Hub_6", "0394od_para_hub_6",
@@ -1734,7 +1717,7 @@ case class MainHub6() {
 
 case class Flange() {
   def apply(topConnector: Connection, bottomConnector: Connection)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName("Flange")
     LowLevelAssembly(
       g.labeledComponentChoice(componentName, "Flange", "0394_para_flange",
@@ -1764,7 +1747,7 @@ case class FlangeWithSide(offset: Double, angle: Double) {
   def apply(sideConnector: Connection, topConnector: Connection,
             //bottomConnector: Connection,
             symmetryCategory: SymmetryCategory)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     //val finalOffset = symmetryCategory.adjustOffset(offset)
     val finalAngle = symmetryCategory.adjustAngle(angle)
     //val finalBottomAngle = symmetryCategory.adjustRotation(0.0)
@@ -1790,7 +1773,7 @@ case class FlangeWithSide(offset: Double, angle: Double) {
 // Not currently used
 case class Support(length: Double) {
   val nameBase = createUniqueName("Support")
-  def apply(connector: Connection)(implicit g: SWRIGenerator): LowLevelAssembly = {
+  def apply(connector: Connection)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName(nameBase)
     LowLevelAssembly(
       g.labeledComponentChoice(componentName, "Tube", "0394OD_para_tube",
@@ -1803,7 +1786,7 @@ case class Support(length: Double) {
 case class Arm(length: Double) {
   val nameBase = createUniqueName("Arm")
   def apply(endConnection1: Connection, endConnection2: Connection)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName(nameBase)
     LowLevelAssembly(
       g.labeledComponentChoice(componentName, "Tube", "0394OD_para_tube",
@@ -1818,7 +1801,7 @@ case class Arm(length: Double) {
 case class Arm3(length: Double) {
   val nameBase = createUniqueName("Arm3")
   def apply(endConnection1: Connection, endConnection2: Connection, offsetConnection: Connection)
-            (implicit g: SWRIGenerator): LowLevelAssembly = {
+            (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName(nameBase)
     LowLevelAssembly(
       g.labeledComponentChoice(componentName, "Tube", "0394OD_para_tube",
@@ -1833,7 +1816,7 @@ case class Arm3(length: Double) {
 
 case class Bend(angle: Double) {
   def apply(connector_1: Connection, connector_2: Connection, symmetryCategory: SymmetryCategory)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val finalAngle = (180.0 + symmetryCategory.adjustAngle(angle)) % 360.0
     val componentName = g.createComponentInstanceName("Bend")
     val finalAngleParam = NamedParam(componentName + "_CLOCK_ANGLE", finalAngle)
@@ -1852,7 +1835,7 @@ case class Bend(angle: Double) {
 case class BendWithTop(angle: Double) {
   def apply(topConnector: Connection, connector_1: Connection, connector_2: Connection,
             symmetryCategory: SymmetryCategory)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val finalAngle = (180.0 + symmetryCategory.adjustAngle(angle)) % 360.0
     val componentName = g.createComponentInstanceName("Bend")
     val finalAngleParam = NamedParam(componentName + "_CLOCK_ANGLE", finalAngle)
@@ -1872,7 +1855,7 @@ case class BendWithTop(angle: Double) {
 case class Cross() {
   val angle = 90.0
   def apply(incomingConnector: Connection, leftConnector: Connection, rightConnector: Connection, forwardConnector: Connection)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName("Cross")
     LowLevelAssembly(
       g.labeledComponentChoice(componentName, "Para_Hub_4", "0394od_para_hub_4",
@@ -1890,7 +1873,7 @@ case class Branch(angle: Double) {
   val bigAngle = (360.0 - angle) / 2.0
   def apply(incomingConnector: Connection, leftConnector: Connection, rightConnector: Connection,
             symmetryCategory: SymmetryCategory)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName(nameBase)
     LowLevelAssembly(
       g.labeledComponentChoice(componentName, "Para_Hub_3", "0394od_para_hub_3",
@@ -1910,7 +1893,7 @@ case class BranchWithTop(angle: Double) {
 
   def apply(topConnector: Connection, incomingConnector: Connection, leftConnector: Connection, rightConnector: Connection,
             symmetryCategory: SymmetryCategory)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName(nameBase)
     LowLevelAssembly(
       g.labeledComponentChoice(componentName,"Para_Hub_3","0394od_para_hub_3",
@@ -1928,7 +1911,7 @@ case class BranchWithTop(angle: Double) {
 case class RotatedArm(length: Double, rot: Double) {
   val nameBase = createUniqueName("RotatedArm")
   def apply(endConnection1: Connection, endConnection2: Connection, symmetryCategory: SymmetryCategory)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     //val finalRot = symmetryCategory.adjustRotation(rot)
     val finalRot = symmetryCategory.adjustAngle(rot)
     val componentName = g.createComponentInstanceName(nameBase)
@@ -1950,7 +1933,7 @@ case class RotatedArm(length: Double, rot: Double) {
 case class RotatedAngledArm(length: Double, rot: Double) {
   val nameBase = createUniqueName("RotatedAngledArm")
   def apply(endConnection1: Connection, endConnection2: Connection, symmetryCategory: SymmetryCategory)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     //val finalRot = symmetryCategory.adjustRotation(symmetryCategory.adjustAngle(rot))
     val finalRot = symmetryCategory.adjustRotation(rot)
     val componentName = g.createComponentInstanceName(nameBase)
@@ -1972,7 +1955,7 @@ case class RotatedAngledArm(length: Double, rot: Double) {
 case class FixedRotationArm(length: Double, rot: Double) {
   val nameBase = createUniqueName("FixedRotationArm")
   def apply(endConnection1: Connection, endConnection2: Connection)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName(nameBase)
     val rotParam = NamedParam(componentName + "_ROT", rot)
     LowLevelAssembly(
@@ -1991,7 +1974,7 @@ case class FixedRotationArm(length: Double, rot: Double) {
 
 case class Orient() {
   val nameBase = "Orient"  // we only have one, so make it less confusing
-  def apply(connector: Connection, bodyRotParam: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+  def apply(connector: Connection, bodyRotParam: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     //val componentName = g.createComponentInstanceName(nameBase)
     val componentName = "Orient"  // Must have this name for Direct2CAD to work!
     LowLevelAssembly(
@@ -2017,7 +2000,7 @@ object Battery {
 
 // ??
 case class Battery(batteryType: String) {
-  def apply(connector: Connection, powerBus: Connection)(implicit g: SWRIGenerator): LowLevelAssembly = {
+  def apply(connector: Connection, powerBus: Connection)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     LowLevelAssembly(
       g.componentChoice("Battery", batteryType, Map(
         "Bottom_Connector" -> Some(connector), // ??
@@ -2039,7 +2022,7 @@ object Servo {
 }
 
 case class Servo(servoType: String) {
-  def apply(connector: Connection)(implicit g: SWRIGenerator): LowLevelAssembly = {
+  def apply(connector: Connection)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     LowLevelAssembly(
       g.componentChoice("Servo", servoType,
         Map("Connector" -> Some(connector)))
@@ -2049,7 +2032,7 @@ case class Servo(servoType: String) {
 
 case class Cargo(weight: Double) {
   val componentName = "Cargo"  // We only have one
-  def apply(connector: Connection)(implicit g: SWRIGenerator): LowLevelAssembly = {
+  def apply(connector: Connection)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val weightParam = NamedParam("CargoMass", weight)
     LowLevelAssembly(
       g.labeledComponentChoice("Cargo", componentName,"Cargo",
@@ -2062,7 +2045,7 @@ case class Cargo(weight: Double) {
 
 case class CargoCase(rot: Double) {
   val componentName = "CargoCase"  // We only have one
-  def apply(hubConnector: Connection, cargoConnector: Connection)(implicit g: SWRIGenerator): LowLevelAssembly = {
+  def apply(hubConnector: Connection, cargoConnector: Connection)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val rotParam = NamedParam("CargoCaseRotation", rot)
     LowLevelAssembly(
       g.labeledComponentChoice(componentName, "CargoCase", "CargoCase", Map(
@@ -2076,7 +2059,7 @@ case class CargoCase(rot: Double) {
 
 case class Sensor(sensorType: String) {
   val componentName = sensorType  // We only have one
-  def apply(connector: Connection)(implicit g: SWRIGenerator): LowLevelAssembly = {
+  def apply(connector: Connection)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     LowLevelAssembly(
       g.componentChoice("Sensor", componentName,
         Map("SensorConnector" -> Some(connector))))
@@ -2087,7 +2070,7 @@ case class Sensor(sensorType: String) {
 // Output_Voltage, Input_Voltage ??
 case class BatteryController() {
   val nameBase = createUniqueName("BatteryController")
-  def apply(motorPower: Connection, batteryPower: Connection)(implicit g: SWRIGenerator): LowLevelAssembly = {
+  def apply(motorPower: Connection, batteryPower: Connection)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName(nameBase)
     LowLevelAssembly(
       g.labeledComponentChoice(componentName, "BatteryController", "BatteryController",
@@ -2112,7 +2095,7 @@ object Prop {
 }
 
 case class Prop(propType: String) {
-  def apply(connector: Connection, symmetryCategory: SymmetryCategory)(implicit g: SWRIGenerator): LowLevelAssembly = {
+  def apply(connector: Connection, symmetryCategory: SymmetryCategory)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName("Propeller")
     LowLevelAssembly(
       g.labeledComponentChoice(componentName, "Propeller", propType,
@@ -2141,7 +2124,7 @@ object Motor {
 
 case class Motor(motorType: String) {
   def apply(connector: Connection, powerIn: Connection,
-            powerOut: Connection, controlChannel: NamedParam)(implicit g: SWRIGenerator): LowLevelAssembly = {
+            powerOut: Connection, controlChannel: NamedParam)(implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName("Motor")
     LowLevelAssembly(
       g.labeledComponentChoice(componentName, "Motor", motorType,
@@ -2192,7 +2175,7 @@ case class Wing(wingType: String, nacaProfile: String, span: Double, chordInner:
   val loadParam = NamedParam(nameBase + "_LOAD", load, Some("wing_load"))
 
   def apply(tubeConnector: Connection, servoConnector: Connection, symmetryCategory: SymmetryCategory)
-           (implicit g: SWRIGenerator): LowLevelAssembly = {
+           (implicit g: LowLevelGenerator): LowLevelAssembly = {
     val componentName = g.createComponentInstanceName(nameBase)
     val tubeRotation = NamedParam(componentName + "_TUBE_ROT", symmetryCategory.adjustAngle(tubeRot))
     val finalTubeOffset = NamedParam(componentName + "_TUBE_OFFSET", symmetryCategory.adjustTubeOffset(tubeOffset, span))

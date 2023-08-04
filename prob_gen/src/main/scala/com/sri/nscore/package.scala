@@ -31,7 +31,7 @@ package object nscore {
   trait HighLevelDesign {
     val name: String
     val validNamePat = "[a-zA-Z0-9_]+"
-    def apply(implicit g: SWRIGenerator): LowLevelAssembly
+    def apply(implicit g: LowLevelGenerator): LowLevelAssembly
   }
 
 

@@ -13,7 +13,7 @@ class BFTest extends FunSuite {
   val componentLibrary = new UAV2ComponentLibrary("./data/components_v2.json",
     "./data/Aero_Corpus.csv", "./data/prop_motor_pairing.csv")
   val treeGenerator = new DefaultUAV2Generator(componentLibrary)
-  val swriGenerator = new SWRIGenerator(componentLibrary)
+  val lowlevelGenerator = new LowLevelGenerator(componentLibrary)
   val outBase = Paths.get("src/test/resources/designs/uav2/")
   implicit val formats = Serialization.formats(NoTypeHints)
 
@@ -23,9 +23,9 @@ class BFTest extends FunSuite {
     val jsonStrTree = treeDesign.toJson()
     val outPathTree = outPath.resolve("design_tree.json")
     Files.write(outPathTree, jsonStrTree.getBytes(StandardCharsets.UTF_8))
-    val swriDesign = swriGenerator.generate(treeDesign)
-    val outPathSwri = outPath.resolve("design_swri.json")
-    Files.write(outPathSwri, swriDesign.toJson().getBytes(StandardCharsets.UTF_8))
+    val lowLevelDesign = lowlevelGenerator.generate(treeDesign)
+    val outPathLowLevel = outPath.resolve("design_low_level.json")
+    Files.write(outPathLowLevel, lowLevelDesign.toJson().getBytes(StandardCharsets.UTF_8))
     nameIndices.clear()
   }
 
