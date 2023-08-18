@@ -87,23 +87,31 @@ def prepare_sequence_data(data_path, spec, batch_size = 512 ,batch_size_val = 51
     D = X.shape[-1]
     N = X.shape[0]
     SL = X.shape[-2] # sequence length
-
-    N_train = int(frac_train * N) # default: 70 %
-    N_val = int(frac_val * N) # default: 10 %
-
-    indices = torch.randperm(N)
-
-    Y_norm = Y.float()
-
-    data_tr = Data(X[indices[:N_train]], Y_norm[indices[:N_train]], src_mask[indices[:N_train]])
-    dataloader_tr = DataLoader(data_tr, batch_size=batch_size,
-                            shuffle=True, num_workers=1)
-    data_val = Data(X[indices[N_train:N_train+N_val]], Y_norm[indices[N_train:N_train+N_val]], src_mask[indices[N_train:N_train+N_val]])
-    dataloader_val = DataLoader(data_val, batch_size=len(data_val),
+    
+    if frac_train == 0.0:
+        Y_norm = Y.float()
+        data_test = Data(X, Y_norm, src_mask)
+        dataloader_test = DataLoader(data_test, batch_size=len(data_test),
                             shuffle=False, num_workers=1)
-    data_test = Data(X[indices[N_train+N_val:]], Y_norm[indices[N_train+N_val:]], src_mask[indices[N_train+N_val:]])
-    dataloader_test = DataLoader(data_test, batch_size=len(data_test),
-                            shuffle=False, num_workers=1)
+        return dataloader_test, scale_1, scale_2
+
+    else:
+        N_train = int(frac_train * N) # default: 70 %
+        N_val = int(frac_val * N) # default: 10 %
+
+        indices = torch.randperm(N)
+
+        Y_norm = Y.float()
+
+        data_tr = Data(X[indices[:N_train]], Y_norm[indices[:N_train]], src_mask[indices[:N_train]])
+        dataloader_tr = DataLoader(data_tr, batch_size=batch_size,
+                                shuffle=True, num_workers=1)
+        data_val = Data(X[indices[N_train:N_train+N_val]], Y_norm[indices[N_train:N_train+N_val]], src_mask[indices[N_train:N_train+N_val]])
+        dataloader_val = DataLoader(data_val, batch_size=len(data_val),
+                                shuffle=False, num_workers=1)
+        data_test = Data(X[indices[N_train+N_val:]], Y_norm[indices[N_train+N_val:]], src_mask[indices[N_train+N_val:]])
+        dataloader_test = DataLoader(data_test, batch_size=len(data_test),
+                                shuffle=False, num_workers=1)
     
     return dataloader_tr, dataloader_val, dataloader_test, scale_1, scale_2
 
